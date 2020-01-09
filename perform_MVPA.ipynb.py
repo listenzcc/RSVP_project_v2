@@ -18,8 +18,13 @@ path_table
 
 # %%
 iter_freqs = [
-    ('Delta', 0, 4),
-    ('Theta', 4, 7),
+    ('a', 0.1, 4),
+    ('b', 1, 4),
+    ('c', 0.1, 30),
+    ('d', 1, 30),
+#     ('Delta0', 0, 4),
+#     ('Delta', 1, 4),
+#     ('Theta', 4, 7),
 #     ('Alpha', 8, 12),
 #     ('Beta', 13, 25),
 #     ('Gamma', 30, 45)
@@ -102,7 +107,7 @@ def report_MVPA(predicts):
 # %%
 regexp = 'MEG_S02'
 
-for regexp in ['EEG_S01', 'EEG_S02', 'EEG_S03', 'EEG_S04', 'EEG_S06', 'EEG_S07', 'EEG_S09']:
+for regexp in ['MEG_S01', 'MEG_S02', 'EEG_S01', 'EEG_S02', 'EEG_S03', 'EEG_S04', 'EEG_S06', 'EEG_S07', 'EEG_S09']:
     MVPA_results = defaultdict(list)
 
     # Read and concatenate raw data
